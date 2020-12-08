@@ -1,0 +1,80 @@
+﻿@model IEnumerable<OshawaMechanic.Models.Employees>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "View Employees";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Oshawa Mechanic</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+
+    <ul>
+        <li><a class="active" href="~/Employees/Create">New Employee</a></li>
+        <li><a class="active" href="~/Employees/ViewEmployees">View All Employee</a></li>
+        <li><a class="active" href="~/Coustmers/Create">New Coustmer</a></li>
+        <li><a class="active" href="~/Coustmers/ViewCoustmers">View All Coustmer</a></li>
+        <li><a class="active" href="~/Assignments/Create">New Assignment</a></li>
+        <li><a class="active" href="~/Assignments/ViewAssignments">View All Assignment</a></li>
+
+    </ul>
+
+    <h1>View Employees</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.employeeId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.employeeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.phoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.employeeAddress)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.employeeId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.employeeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.phoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.employeeAddress)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.employeeId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.employeeId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.employeeId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+
+</html>

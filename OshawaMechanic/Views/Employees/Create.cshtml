@@ -1,0 +1,69 @@
+﻿@model OshawaMechanic.Models.Employees
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Oshawa Mechanic</title>
+
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+
+    <ul>
+        <li><a class="active" href="~/Employees/Create">New Employee</a></li>
+        <li><a class="active" href="~/Employees/ViewEmployees">View All Employee</a></li>
+        <li><a class="active" href="~/Coustmers/Create">New Coustmer</a></li>
+        <li><a class="active" href="~/Coustmers/ViewCoustmers">View All Coustmer</a></li>
+        <li><a class="active" href="~/Assignments/Create">New Assignment</a></li>
+        <li><a class="active" href="~/Assignments/ViewAssignments">View All Assignment</a></li>
+
+    </ul>
+    <h1>Create</h1>
+
+    <h4>Employees</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="employeeName" class="control-label"></label>
+                    <input asp-for="employeeName" class="form-control" />
+                    <span asp-validation-for="employeeName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="phoneNumber" class="control-label"></label>
+                    <input asp-for="phoneNumber" class="form-control" />
+                    <span asp-validation-for="phoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="employeeAddress" class="control-label"></label>
+                    <input asp-for="employeeAddress" class="form-control" />
+                    <span asp-validation-for="employeeAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

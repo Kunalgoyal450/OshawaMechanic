@@ -1,0 +1,65 @@
+﻿@model OshawaMechanic.Models.Coustmers
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+    <h1>Edit</h1>
+
+    <h4>Coustmers</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="coustmerId" />
+                <div class="form-group">
+                    <label asp-for="coustmerName" class="control-label"></label>
+                    <input asp-for="coustmerName" class="form-control" />
+                    <span asp-validation-for="coustmerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="coustmerphoneNumber" class="control-label"></label>
+                    <input asp-for="coustmerphoneNumber" class="form-control" />
+                    <span asp-validation-for="coustmerphoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="coustmerAddress" class="control-label"></label>
+                    <input asp-for="coustmerAddress" class="form-control" />
+                    <span asp-validation-for="coustmerAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="View Coustmers">Back to List</a>
+    </div>
+
+</body>
+
+</html>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+
+

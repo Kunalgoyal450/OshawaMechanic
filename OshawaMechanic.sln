@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OshawaMechanic", "OshawaMechanic\OshawaMechanic.csproj", "{B94B5921-4E5E-4E2C-BDE1-5873FE80873D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B94B5921-4E5E-4E2C-BDE1-5873FE80873D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94B5921-4E5E-4E2C-BDE1-5873FE80873D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94B5921-4E5E-4E2C-BDE1-5873FE80873D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94B5921-4E5E-4E2C-BDE1-5873FE80873D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40846E88-AFAA-41F4-9A9B-037070FF4444}
+	EndGlobalSection
+EndGlobal

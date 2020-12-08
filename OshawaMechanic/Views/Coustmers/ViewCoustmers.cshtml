@@ -1,0 +1,84 @@
+﻿@model IEnumerable<OshawaMechanic.Models.Coustmers>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+@{
+    ViewData["Title"] = "View Coustmers";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Oshawa Mechanic</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+
+    <ul>
+        <li><a class="active" href="~/Employees/Create">New Employee</a></li>
+        <li><a class="active" href="~/Employees/ViewEmployees">View All Employee</a></li>
+        <li><a class="active" href="~/Coustmers/Create">New Coustmer</a></li>
+        <li><a class="active" href="~/Coustmers/ViewCoustmers">View All Coustmer</a></li>
+        <li><a class="active" href="~/Assignments/Create">New Assignment</a></li>
+        <li><a class="active" href="~/Assignments/ViewAssignments">View All Assignment</a></li>
+
+    </ul>
+
+    <h1>Index</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.coustmerId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.coustmerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.coustmerphoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.coustmerAddress)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.coustmerId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.coustmerName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.coustmerphoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.coustmerAddress)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.coustmerId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.coustmerId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.coustmerId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+
+</html>
